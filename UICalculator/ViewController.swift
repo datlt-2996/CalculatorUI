@@ -135,11 +135,9 @@ class ViewController: UIViewController {
     @IBAction func devideButton(_ sender: Any) {
         if(!resultLabel.isEmpty){
             nextMath()
-            workings = workings + ".000"
             addToWorkings(value: "/")
         }
         else{
-            workings = workings + ".000"
             addToWorkings(value: "/")
         }
 
