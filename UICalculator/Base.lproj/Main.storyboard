@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-aJ-nx1">
+                                <rect key="frame" x="0.0" y="303" width="414" height="517.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-gV-IJq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2KM-eq-Uyk">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-ze-1cK" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="AC">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="allClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gI5-RC-dY3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="i1q-ze-1cK" firstAttribute="centerY" secondItem="2KM-eq-Uyk" secondAttribute="centerY" id="7JC-S1-SYa"/>
+                                                    <constraint firstItem="i1q-ze-1cK" firstAttribute="centerX" secondItem="2KM-eq-Uyk" secondAttribute="centerX" id="beY-34-bIs"/>
+                                                    <constraint firstItem="i1q-ze-1cK" firstAttribute="width" secondItem="2KM-eq-Uyk" secondAttribute="width" multiplier="0.85" id="mZa-uk-3Lj"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-TS-m69">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onL-9E-8j6" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="88" id="7F7-yR-ttN"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="⌫">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jO7-0m-Eg4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="onL-9E-8j6" firstAttribute="width" secondItem="T2h-TS-m69" secondAttribute="width" multiplier="0.85" id="1fi-LN-jqT"/>
+                                                    <constraint firstItem="onL-9E-8j6" firstAttribute="height" secondItem="T2h-TS-m69" secondAttribute="height" multiplier="0.85" id="GwP-f8-Kqc"/>
+                                                    <constraint firstItem="onL-9E-8j6" firstAttribute="centerX" secondItem="T2h-TS-m69" secondAttribute="centerX" id="XOS-30-b1X"/>
+                                                    <constraint firstItem="onL-9E-8j6" firstAttribute="centerY" secondItem="T2h-TS-m69" secondAttribute="centerY" id="tzV-FH-CnL"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTU-9u-Dnm">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtX-bn-d21" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="88" id="zrk-ro-Q9f"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="%">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="percentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kiO-Ep-cZt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="AtX-bn-d21" firstAttribute="centerY" secondItem="VTU-9u-Dnm" secondAttribute="centerY" id="1hp-dc-U8I"/>
+                                                    <constraint firstItem="AtX-bn-d21" firstAttribute="centerX" secondItem="VTU-9u-Dnm" secondAttribute="centerX" id="7uX-dE-cjv"/>
+                                                    <constraint firstItem="AtX-bn-d21" firstAttribute="width" secondItem="VTU-9u-Dnm" secondAttribute="width" multiplier="0.85" id="ngb-kX-27I"/>
+                                                    <constraint firstItem="AtX-bn-d21" firstAttribute="height" secondItem="VTU-9u-Dnm" secondAttribute="height" multiplier="0.85" id="y4n-QL-5Xl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WW0-uK-vs9">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDd-xN-5FA" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="/">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="devideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6n2-Vy-i5d"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="WDd-xN-5FA" firstAttribute="height" secondItem="WW0-uK-vs9" secondAttribute="height" multiplier="0.85" id="ZdJ-v1-GO6"/>
+                                                    <constraint firstItem="WDd-xN-5FA" firstAttribute="centerY" secondItem="WW0-uK-vs9" secondAttribute="centerY" id="feu-nC-xEg"/>
+                                                    <constraint firstItem="WDd-xN-5FA" firstAttribute="centerX" secondItem="WW0-uK-vs9" secondAttribute="centerX" id="jiY-pR-5sK"/>
+                                                    <constraint firstItem="WDd-xN-5FA" firstAttribute="width" secondItem="WW0-uK-vs9" secondAttribute="width" multiplier="0.85" id="zaa-pH-22b"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="onL-9E-8j6" firstAttribute="width" secondItem="i1q-ze-1cK" secondAttribute="width" id="0f4-aX-apn"/>
+                                            <constraint firstItem="onL-9E-8j6" firstAttribute="height" secondItem="i1q-ze-1cK" secondAttribute="height" id="40B-pM-QhV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dkh-6q-3lb">
+                                        <rect key="frame" x="0.0" y="103.5" width="414" height="103.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fC-eO-IE5">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoN-Z7-2JE" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="7">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B3b-6E-f33"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="qoN-Z7-2JE" firstAttribute="centerY" secondItem="1fC-eO-IE5" secondAttribute="centerY" id="2Z5-yq-3gQ"/>
+                                                    <constraint firstItem="qoN-Z7-2JE" firstAttribute="centerX" secondItem="1fC-eO-IE5" secondAttribute="centerX" id="JdS-H0-Zzl"/>
+                                                    <constraint firstItem="qoN-Z7-2JE" firstAttribute="width" secondItem="1fC-eO-IE5" secondAttribute="width" multiplier="0.85" id="fxk-uD-oRC"/>
+                                                    <constraint firstItem="qoN-Z7-2JE" firstAttribute="height" secondItem="1fC-eO-IE5" secondAttribute="height" multiplier="0.85" id="syy-zY-T52"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lax-Hy-pF2">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyP-u3-5Jx" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="8">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtW-gN-a4p"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="zyP-u3-5Jx" firstAttribute="height" secondItem="Lax-Hy-pF2" secondAttribute="height" multiplier="0.85" id="4FY-n6-R4z"/>
+                                                    <constraint firstItem="zyP-u3-5Jx" firstAttribute="centerX" secondItem="Lax-Hy-pF2" secondAttribute="centerX" id="TBa-mT-atF"/>
+                                                    <constraint firstItem="zyP-u3-5Jx" firstAttribute="width" secondItem="Lax-Hy-pF2" secondAttribute="width" multiplier="0.85" id="kRB-qD-8fW"/>
+                                                    <constraint firstItem="zyP-u3-5Jx" firstAttribute="centerY" secondItem="Lax-Hy-pF2" secondAttribute="centerY" id="scq-5Z-q7s"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waU-ug-sTi">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSm-pA-6F7" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="9">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ckr-2L-wNN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="LSm-pA-6F7" firstAttribute="centerX" secondItem="waU-ug-sTi" secondAttribute="centerX" id="IWD-eE-Hpt"/>
+                                                    <constraint firstItem="LSm-pA-6F7" firstAttribute="centerY" secondItem="waU-ug-sTi" secondAttribute="centerY" id="gDI-JW-0R0"/>
+                                                    <constraint firstItem="LSm-pA-6F7" firstAttribute="height" secondItem="waU-ug-sTi" secondAttribute="height" multiplier="0.85" id="sG1-LE-bkz"/>
+                                                    <constraint firstItem="LSm-pA-6F7" firstAttribute="width" secondItem="waU-ug-sTi" secondAttribute="width" multiplier="0.85" id="x0G-OZ-SGO"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POA-R8-ayz">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5H-gV-yAT" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="x">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="mutilButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lov-Xx-7g6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="K5H-gV-yAT" firstAttribute="height" secondItem="POA-R8-ayz" secondAttribute="height" multiplier="0.85" id="II7-1r-cVz"/>
+                                                    <constraint firstItem="K5H-gV-yAT" firstAttribute="centerX" secondItem="POA-R8-ayz" secondAttribute="centerX" id="POd-Ke-ICL"/>
+                                                    <constraint firstItem="K5H-gV-yAT" firstAttribute="centerY" secondItem="POA-R8-ayz" secondAttribute="centerY" id="hQ4-KZ-fub"/>
+                                                    <constraint firstItem="K5H-gV-yAT" firstAttribute="width" secondItem="POA-R8-ayz" secondAttribute="width" multiplier="0.85" id="lN6-4B-1Ka"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-hf-Mb1">
+                                        <rect key="frame" x="0.0" y="207" width="414" height="103.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQH-jy-va3">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPB-tz-Z1d" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="4">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tS7-H8-c58"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="hPB-tz-Z1d" firstAttribute="centerX" secondItem="pQH-jy-va3" secondAttribute="centerX" id="6qV-ro-xX3"/>
+                                                    <constraint firstItem="hPB-tz-Z1d" firstAttribute="height" secondItem="pQH-jy-va3" secondAttribute="height" multiplier="0.85" id="LME-uR-UOg"/>
+                                                    <constraint firstItem="hPB-tz-Z1d" firstAttribute="width" secondItem="pQH-jy-va3" secondAttribute="width" multiplier="0.85" id="v82-1C-a22"/>
+                                                    <constraint firstItem="hPB-tz-Z1d" firstAttribute="centerY" secondItem="pQH-jy-va3" secondAttribute="centerY" id="yvy-fc-xqu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uu5-4m-MQP">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-DQ-cHf" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="5">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jeM-XH-zBQ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="bHA-DQ-cHf" firstAttribute="width" secondItem="Uu5-4m-MQP" secondAttribute="width" multiplier="0.85" id="AIx-BR-bHX"/>
+                                                    <constraint firstItem="bHA-DQ-cHf" firstAttribute="centerY" secondItem="Uu5-4m-MQP" secondAttribute="centerY" id="WtT-dK-yrb"/>
+                                                    <constraint firstItem="bHA-DQ-cHf" firstAttribute="centerX" secondItem="Uu5-4m-MQP" secondAttribute="centerX" id="h0Y-9Y-snb"/>
+                                                    <constraint firstItem="bHA-DQ-cHf" firstAttribute="height" secondItem="Uu5-4m-MQP" secondAttribute="height" multiplier="0.85" id="lHp-eQ-0aN"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neS-P3-4z3">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqK-wL-fTS" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="6">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4VX-JW-c3M"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="KqK-wL-fTS" firstAttribute="height" secondItem="neS-P3-4z3" secondAttribute="height" multiplier="0.85" id="DWI-CA-35a"/>
+                                                    <constraint firstItem="KqK-wL-fTS" firstAttribute="width" secondItem="neS-P3-4z3" secondAttribute="width" multiplier="0.85" id="FpA-JK-Kjo"/>
+                                                    <constraint firstItem="KqK-wL-fTS" firstAttribute="centerY" secondItem="neS-P3-4z3" secondAttribute="centerY" id="PdF-ia-wcP"/>
+                                                    <constraint firstItem="KqK-wL-fTS" firstAttribute="centerX" secondItem="neS-P3-4z3" secondAttribute="centerX" id="YMg-ah-7uW"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-1l-ID9">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-Zr-qrA" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="5.5" width="87.5" height="92.5"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="-">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="minusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBH-it-WKM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="VHU-Zr-qrA" firstAttribute="centerX" secondItem="IlJ-1l-ID9" secondAttribute="centerX" id="2Ib-sd-Z7B"/>
+                                                    <constraint firstItem="VHU-Zr-qrA" firstAttribute="centerY" secondItem="IlJ-1l-ID9" secondAttribute="centerY" id="Tte-cb-Tau"/>
+                                                    <constraint firstItem="VHU-Zr-qrA" firstAttribute="width" secondItem="IlJ-1l-ID9" secondAttribute="width" multiplier="0.845411" id="X0B-KZ-3jc"/>
+                                                    <constraint firstItem="VHU-Zr-qrA" firstAttribute="height" secondItem="IlJ-1l-ID9" secondAttribute="height" multiplier="0.89372" id="eg8-2D-kSt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E46-VW-hB6">
+                                        <rect key="frame" x="0.0" y="310.5" width="414" height="103.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGN-FS-PPm">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q54-gC-v7k" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="1">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fga-eW-dsR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="q54-gC-v7k" firstAttribute="centerY" secondItem="nGN-FS-PPm" secondAttribute="centerY" id="AU6-Xf-H7o"/>
+                                                    <constraint firstItem="q54-gC-v7k" firstAttribute="centerX" secondItem="nGN-FS-PPm" secondAttribute="centerX" id="Auj-Tb-Zg7"/>
+                                                    <constraint firstItem="q54-gC-v7k" firstAttribute="width" secondItem="nGN-FS-PPm" secondAttribute="width" multiplier="0.85" id="GvM-Fb-1Hv"/>
+                                                    <constraint firstItem="q54-gC-v7k" firstAttribute="height" secondItem="nGN-FS-PPm" secondAttribute="height" multiplier="0.85" id="jx8-85-pZo"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xid-A6-1Aj">
+                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3p-P9-4pp" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="2">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZHb-Ay-lQk"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="W3p-P9-4pp" firstAttribute="height" secondItem="Xid-A6-1Aj" secondAttribute="height" multiplier="0.85" id="VvM-Bj-oQU"/>
+                                                    <constraint firstItem="W3p-P9-4pp" firstAttribute="width" secondItem="Xid-A6-1Aj" secondAttribute="width" multiplier="0.85" id="W4P-GC-gJr"/>
+                                                    <constraint firstItem="W3p-P9-4pp" firstAttribute="centerX" secondItem="Xid-A6-1Aj" secondAttribute="centerX" id="ot5-Ym-JfA"/>
+                                                    <constraint firstItem="W3p-P9-4pp" firstAttribute="centerY" secondItem="Xid-A6-1Aj" secondAttribute="centerY" id="pkj-5I-sz2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVF-48-TXO">
+                                                <rect key="frame" x="207" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-hD-QHe" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="3">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X6H-lw-FpJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="6Sa-hD-QHe" firstAttribute="centerY" secondItem="LVF-48-TXO" secondAttribute="centerY" id="EVR-SG-caB"/>
+                                                    <constraint firstItem="6Sa-hD-QHe" firstAttribute="centerX" secondItem="LVF-48-TXO" secondAttribute="centerX" id="NkF-cB-OMn"/>
+                                                    <constraint firstItem="6Sa-hD-QHe" firstAttribute="height" secondItem="LVF-48-TXO" secondAttribute="height" multiplier="0.85" id="gAA-mF-EVb"/>
+                                                    <constraint firstItem="6Sa-hD-QHe" firstAttribute="width" secondItem="LVF-48-TXO" secondAttribute="width" multiplier="0.85" id="nKp-we-h4Y"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3U0-Gb-FyE">
+                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-SN-4wt" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="+">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="plusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r21-OC-zlf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="7Zs-SN-4wt" firstAttribute="height" secondItem="3U0-Gb-FyE" secondAttribute="height" multiplier="0.85" id="3rk-7A-WeI"/>
+                                                    <constraint firstItem="7Zs-SN-4wt" firstAttribute="width" secondItem="3U0-Gb-FyE" secondAttribute="width" multiplier="0.85" id="7Wj-ZJ-x9M"/>
+                                                    <constraint firstItem="7Zs-SN-4wt" firstAttribute="centerX" secondItem="3U0-Gb-FyE" secondAttribute="centerX" id="BMT-Dn-3y4"/>
+                                                    <constraint firstItem="7Zs-SN-4wt" firstAttribute="centerY" secondItem="3U0-Gb-FyE" secondAttribute="centerY" id="rqU-3y-rl6"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-wT-8NI">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="103.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGX-DH-X0V">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="103.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuY-zQ-xhl" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="7.5" width="191" height="88"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="0">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTh-Ds-tCD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="DuY-zQ-xhl" firstAttribute="centerX" secondItem="cGX-DH-X0V" secondAttribute="centerX" id="D71-Cr-7hs"/>
+                                                    <constraint firstItem="DuY-zQ-xhl" firstAttribute="height" secondItem="cGX-DH-X0V" secondAttribute="height" multiplier="0.85" id="Ovc-r5-fOu"/>
+                                                    <constraint firstItem="DuY-zQ-xhl" firstAttribute="width" secondItem="cGX-DH-X0V" secondAttribute="width" multiplier="0.925" id="kqN-N7-1hc"/>
+                                                    <constraint firstItem="DuY-zQ-xhl" firstAttribute="centerY" secondItem="cGX-DH-X0V" secondAttribute="centerY" id="qA2-Y4-py1"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UEX-vW-PhI">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="103.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-cB-WQ4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="103.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-b4-0zJ" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=",">
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="dotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgG-RG-7Ty"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="1Ze-b4-0zJ" firstAttribute="width" secondItem="tqa-cB-WQ4" secondAttribute="width" multiplier="0.85" id="IT5-jT-bXo"/>
+                                                            <constraint firstItem="1Ze-b4-0zJ" firstAttribute="height" secondItem="tqa-cB-WQ4" secondAttribute="height" multiplier="0.85" id="SBh-Ih-7kK"/>
+                                                            <constraint firstItem="1Ze-b4-0zJ" firstAttribute="centerY" secondItem="tqa-cB-WQ4" secondAttribute="centerY" id="UEK-iI-i9T"/>
+                                                            <constraint firstItem="1Ze-b4-0zJ" firstAttribute="centerX" secondItem="tqa-cB-WQ4" secondAttribute="centerX" id="gDh-6F-3OY"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHe-ha-GvT">
+                                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="103.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEZ-bh-SbL" customClass="MyButton" customModule="UICalculator" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="7.5" width="87.5" height="88"/>
+                                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="=">
+                                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="equalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1cW-vA-fL6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="DEZ-bh-SbL" firstAttribute="height" secondItem="KHe-ha-GvT" secondAttribute="height" multiplier="0.85" id="6yB-yk-zYY"/>
+                                                            <constraint firstItem="DEZ-bh-SbL" firstAttribute="centerY" secondItem="KHe-ha-GvT" secondAttribute="centerY" id="CuD-W7-ITg"/>
+                                                            <constraint firstItem="DEZ-bh-SbL" firstAttribute="width" secondItem="KHe-ha-GvT" secondAttribute="width" multiplier="0.85" id="Dzx-sc-bM1"/>
+                                                            <constraint firstItem="DEZ-bh-SbL" firstAttribute="centerX" secondItem="KHe-ha-GvT" secondAttribute="centerX" id="egy-O0-GH2"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7Z-dD-P8K">
+                                <rect key="frame" x="0.0" y="44" width="414" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tC-r2-Pj1">
+                                        <rect key="frame" x="0.0" y="167" width="394" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VM0-NT-aBh">
+                                        <rect key="frame" x="0.0" y="60" width="394" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="VM0-NT-aBh" firstAttribute="leading" secondItem="M7Z-dD-P8K" secondAttribute="leading" id="Cwh-mx-WUm"/>
+                                    <constraint firstAttribute="trailing" secondItem="VM0-NT-aBh" secondAttribute="trailing" constant="20" symbolic="YES" id="Klw-Rc-DHG"/>
+                                    <constraint firstItem="1tC-r2-Pj1" firstAttribute="leading" secondItem="M7Z-dD-P8K" secondAttribute="leading" id="PF0-dh-nsd"/>
+                                    <constraint firstAttribute="trailing" secondItem="1tC-r2-Pj1" secondAttribute="trailing" constant="20" id="WdK-dq-h3Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="1tC-r2-Pj1" secondAttribute="bottom" constant="20" id="Z2D-lt-faL"/>
+                                    <constraint firstItem="VM0-NT-aBh" firstAttribute="top" secondItem="M7Z-dD-P8K" secondAttribute="top" constant="60" id="qXY-fW-Sn8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ckb-aJ-nx1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0TW-Mc-9YB"/>
+                            <constraint firstItem="ckb-aJ-nx1" firstAttribute="top" secondItem="M7Z-dD-P8K" secondAttribute="bottom" id="0YK-BS-3L9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ckb-aJ-nx1" secondAttribute="trailing" id="DKJ-jq-nLv"/>
+                            <constraint firstItem="ckb-aJ-nx1" firstAttribute="height" secondItem="M7Z-dD-P8K" secondAttribute="height" multiplier="2" id="F6l-9j-8O5"/>
+                            <constraint firstItem="ckb-aJ-nx1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iEc-qj-K8g"/>
+                            <constraint firstItem="M7Z-dD-P8K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mSd-MJ-FAg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M7Z-dD-P8K" secondAttribute="trailing" id="maB-so-coZ"/>
+                            <constraint firstItem="M7Z-dD-P8K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vn2-tA-xjg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculatorResults" destination="1tC-r2-Pj1" id="k07-n3-SNZ"/>
+                        <outlet property="calculatorWorking" destination="VM0-NT-aBh" id="dRL-pB-glA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="1Ze-b4-0zJ">
+            <size key="intrinsicContentSize" width="32" height="50"/>
+        </designable>
+        <designable name="6Sa-hD-QHe">
+            <size key="intrinsicContentSize" width="43.5" height="50"/>
+        </designable>
+        <designable name="7Zs-SN-4wt">
+            <size key="intrinsicContentSize" width="44" height="50"/>
+        </designable>
+        <designable name="AtX-bn-d21">
+            <size key="intrinsicContentSize" width="51.5" height="50"/>
+        </designable>
+        <designable name="DEZ-bh-SbL">
+            <size key="intrinsicContentSize" width="44" height="50"/>
+        </designable>
+        <designable name="DuY-zQ-xhl">
+            <size key="intrinsicContentSize" width="44.5" height="50"/>
+        </designable>
+        <designable name="K5H-gV-yAT">
+            <size key="intrinsicContentSize" width="40.5" height="50"/>
+        </designable>
+        <designable name="KqK-wL-fTS">
+            <size key="intrinsicContentSize" width="44" height="50"/>
+        </designable>
+        <designable name="LSm-pA-6F7">
+            <size key="intrinsicContentSize" width="44" height="50"/>
+        </designable>
+        <designable name="VHU-Zr-qrA">
+            <size key="intrinsicContentSize" width="38" height="50"/>
+        </designable>
+        <designable name="W3p-P9-4pp">
+            <size key="intrinsicContentSize" width="42.5" height="50"/>
+        </designable>
+        <designable name="WDd-xN-5FA">
+            <size key="intrinsicContentSize" width="33.5" height="50"/>
+        </designable>
+        <designable name="bHA-DQ-cHf">
+            <size key="intrinsicContentSize" width="43.5" height="50"/>
+        </designable>
+        <designable name="hPB-tz-Z1d">
+            <size key="intrinsicContentSize" width="44" height="50"/>
+        </designable>
+        <designable name="i1q-ze-1cK">
+            <size key="intrinsicContentSize" width="66" height="50"/>
+        </designable>
+        <designable name="onL-9E-8j6">
+            <size key="intrinsicContentSize" width="55.5" height="50"/>
+        </designable>
+        <designable name="q54-gC-v7k">
+            <size key="intrinsicContentSize" width="39" height="50"/>
+        </designable>
+        <designable name="qoN-Z7-2JE">
+            <size key="intrinsicContentSize" width="42" height="50"/>
+        </designable>
+        <designable name="zyP-u3-5Jx">
+            <size key="intrinsicContentSize" width="44" height="50"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
